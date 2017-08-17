@@ -36,7 +36,24 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
-    //    compile project(':armour')
-    //    compileOnly(name:'armour', ext:'aar') arr 也是android module
     provided files('libs/classes.jar')
+//    compile files('libs/classes.jar')
 }
+
+
+// 在plugin 发布到本地成功，但在这里apply失败，找不到插件，
+// 在plugin build生成的jar包，没有代码，因为使用到kotlin、改成java代码就可以，可以kotlin环境没配置好
+buildscript {
+    repositories {
+        maven {
+            //本地Maven仓库地址
+            url uri('/Users/yangzhiwen/Documents/armourplugin')
+        }
+    }
+    dependencies {
+        //格式为-->group:module:version
+        classpath 'com.yangzhiwen.plugin:armourplugin:1.0.0'
+    }
+}
+//com.hc.gradle为resources/META-INF/gradle-plugins下的properties文件名称
+apply plugin: 'com.yangzhiwen.armourplugin'

@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CenterActivity"></activity>
+        <activity android:name=".CenterActivity" />
 
         <receiver android:name=".UserCenterReceiver">
             <intent-filter>
@@ -29,6 +29,18 @@
         </receiver>
 
         <service android:name=".UserCenterService" />
+
+        <provider
+            android:name=".UserContentProvider"
+            android:authorities="com.yangzhiwen.user"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".UserRemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
     </application>
 
 </manifest>
