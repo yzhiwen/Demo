@@ -1,10 +1,9 @@
 package com.yangzhiwen.demo
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.yangzhiwen.armour.compass.Navigator
-import com.yangzhiwen.armour.ext.compass.*
 
 class MainActivity : Activity() {
 
@@ -12,7 +11,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.center).setOnClickListener {
-            Navigator.instance.startActivity("user_center", "center", "arg")
+            startActivity(Intent(this, CenterActivity::class.java))
         }
     }
 }

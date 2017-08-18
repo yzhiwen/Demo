@@ -21,7 +21,7 @@ class UserRemoteService : Service() {
         println("user center UserRemoteService on bind")
         println("====================================")
         println(" ")
-        Toast.makeText(this, "UserCenterService onBind", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserRemoteService onBind", Toast.LENGTH_SHORT).show()
         return UserCenterBinder()
     }
 
@@ -41,7 +41,7 @@ class UserRemoteService : Service() {
         println("user center UserRemoteService on create")
         println("====================================")
         println(" ")
-        Toast.makeText(this, "UserCenterService onCreate", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserRemoteService onCreate", Toast.LENGTH_SHORT).show()
         super.onCreate()
     }
 
@@ -51,7 +51,7 @@ class UserRemoteService : Service() {
         println("user center UserRemoteService on start command $intent")
         println("====================================")
         println(" ")
-        Toast.makeText(this, "UserCenterService onStartCommand", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserRemoteService onStartCommand", Toast.LENGTH_SHORT).show()
         return super.onStartCommand(intent, flags, startId)
     }
 
@@ -61,7 +61,7 @@ class UserRemoteService : Service() {
         println("user center UserRemoteService on destroy")
         println("====================================")
         println(" ")
-        Toast.makeText(this, "UserCenterService onDestroy", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserRemoteService onDestroy", Toast.LENGTH_SHORT).show()
         super.onDestroy()
     }
 
@@ -71,7 +71,7 @@ class UserRemoteService : Service() {
         println("user center UserRemoteService on un bind")
         println("====================================")
         println(" ")
-        Toast.makeText(this, "UserCenterService onUnbind", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserRemoteService onUnbind", Toast.LENGTH_SHORT).show()
         return super.onUnbind(intent)
     }
 }
