@@ -13,6 +13,12 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN2" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN3" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -22,6 +28,7 @@
         <receiver android:name=".UserCenterReceiver">
             <intent-filter>
                 <action android:name="user_center_msg" />
+                <action android:name="222" />
             </intent-filter>
             <intent-filter>
                 <action android:name="user_center_setting_msg" />
