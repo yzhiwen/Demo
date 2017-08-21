@@ -29,15 +29,13 @@ repositories {
     }
 }
 dependencies {
-//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
-//    provided files('libs/classes.jar')
-//    compile files('libs/classes.jar')
 }
 
 
@@ -45,6 +43,7 @@ dependencies {
 // 在plugin build生成的jar包，没有代码，因为使用到kotlin、改成java代码就可以，可以kotlin环境没配置好
 buildscript {
     repositories {
+        jcenter()
         maven {
             //本地Maven仓库地址
             url uri('/Users/yangzhiwen/Documents/armourplugin')

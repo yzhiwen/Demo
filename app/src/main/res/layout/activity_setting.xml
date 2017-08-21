@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Center" />
+                android:text="插件Activity" />
 
             <Button
                 android:id="@+id/send"
@@ -35,6 +35,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="start 插件Service" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="unBindService前需要先启动" />
 
             <Button
                 android:id="@+id/bind_local"

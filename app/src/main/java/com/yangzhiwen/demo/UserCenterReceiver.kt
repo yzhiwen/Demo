@@ -17,7 +17,5 @@ class UserCenterReceiver : BroadcastReceiver() {
         println(" ")
 
         Toast.makeText(context, "UserCenterReceiver onReceive", Toast.LENGTH_SHORT).show()
-        val bg = context?.resources?.getDrawable(R.drawable.abcddd) ?: return
-        Bus.instance.post(bg)
     }
 }
