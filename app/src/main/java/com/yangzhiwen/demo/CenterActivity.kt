@@ -2,12 +2,10 @@ package com.yangzhiwen.demo
 
 import android.app.Activity
 import android.content.*
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.IBinder
 import android.widget.Button
-import android.widget.ImageView
 
 // todo extend AppCompatActivity has some resource error
 // 有堆栈信息，主要是v7包的错
@@ -22,10 +20,6 @@ class CenterActivity : Activity() {
 
 // todo 如果没有处理资源的话，通过欺上瞒下启动该Activity会失败，不会报错，而是跳转到Proxy Activity
         xmlView()
-    }
-
-    fun onEvent(d: Drawable) {
-        findViewById<ImageView>(R.id.iv).setImageDrawable(d)
     }
 
     private fun xmlView() {
