@@ -36,9 +36,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
+//    compile 'com.yangzhiwen:armour:0.1.0'
 }
 
 
+///*
 // 在plugin 发布到本地成功，但在这里apply失败，找不到插件，
 // 在plugin build生成的jar包，没有代码，因为使用到kotlin、改成java代码就可以，可以kotlin环境没配置好
 buildscript {
@@ -56,3 +58,4 @@ buildscript {
 //com.hc.gradle为resources/META-INF/gradle-plugins下的properties文件名称
 //apply plugin: 'arplugin'
 apply plugin: 'com.yangzhiwen.armourplugin'
+//*/
